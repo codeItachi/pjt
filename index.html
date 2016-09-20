@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+	<style>
+.box{
+	width: 100px;
+	height: 100px;
+	border:1px solid blue;
+}
+	</style>
+	<script src="./js/function.js"></script>
+   
+	<script>
+/*
+鼠标:7个 onclick ondbclick onmouseover onmoseout 
+键盘:onkeyup onkeydown onkeypress(长按)
+表单: 4 onfocus onblur onchange onsubmit
+window页面: onload onresize (检测窗口改变) onscroll
+*/
+
+
+$(function(){
+	var box=$(".box")[0];
+	box.onclick=aa
+	function aa(){
+		alert("虞姬何在!")
+	}
+	function bb(){
+		alert("霸王在此!")
+	}
+	//box.addEventListener("click",bb,false)
+	box.attachEvent("onclick",bb)
+})
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
